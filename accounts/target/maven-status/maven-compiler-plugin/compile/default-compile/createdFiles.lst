@@ -1,0 +1,11 @@
+com\test\accounts\com\test\accounts\util\FileUtils.class
+com\test\accounts\web\WebConfiguration.class
+com\test\accounts\service\AccountServiceImpl.class
+com\test\accounts\web\AccountsController.class
+com\test\accounts\dao\AccountDAO.class
+com\test\accounts\dao\AccountDAOImpl.class
+com\test\accounts\io\Transactions.class
+com\test\accounts\service\AccountService.class
+com\test\accounts\web\AccountErrorController.class
+com\test\accounts\io\Account.class
+com\test\accounts\web\Application.class

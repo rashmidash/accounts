@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="account">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="starter.js"></script>
+    <!--<script src="app.js"></script>-->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Customer Accounts </h1>
+
+
+<div ng-controller="accountController">
+    <div>
+        <table>
+            <tr>
+                <td ng-repeat="header in headers">{{header}}</td>
+            </tr>
+            <tr ng-repeat="row in accouctresp">
+                <td><a ng-href="#" ng-click="getAccountNo(row.accountNumber)">{{row.accountNumber}}</a></td>
+                <td>{{row.accountName}}</td>
+                <td>{{row.currency}}</td>
+                <td>{{row.accountType}}</td>
+                <td>{{row.balanceDate}}</td>
+                <td>{{row.openingBalance}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+
+    <div ng-if="transheaders && transactionresp ">
+        <h1> Transactions for Account Number - {{inputAccNo}} </h1>
+        <table>
+            <tr>
+                <td ng-repeat="tranheader in transheaders">{{tranheader}}</td>
+            </tr>
+                <tr ng-repeat="row in transactionresp" >
+
+                    <td>{{row.accountNumber}}</a></td>
+                    <td>{{row.accountName}}</td>
+                    <td>{{row.currency}}</td>
+                    <td>{{row.accountType}}</td>
+                    <td>{{row.valueDate}}</td>
+                    <td>{{row.debitAmount}}</td>
+                    <td>{{row.creditAmount}}</td>
+                    <td>{{row.cardType}}</td>
+                </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

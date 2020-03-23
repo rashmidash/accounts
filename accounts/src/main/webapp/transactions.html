@@ -1,0 +1,39 @@
+<!--
+<!DOCTYPE html>
+<html >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    &lt;!&ndash;<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>&ndash;&gt;
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="starter.js"></script>
+    &lt;!&ndash;<script src="app.js"></script>&ndash;&gt;
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Customer Transactions Details</h1>
+
+<div ng-app="account" ng-controller="transactionsCtrl">
+    <table>
+        <tr>
+            <td ng-repeat="header in transheaders">{{header}}</td>
+        </tr>
+        <tr ng-repeat="row in transactionresp">
+            <td><a ng-href="#/transactions/{{row.accountNumber}}">{{row.accountNumber}}</a></td>
+            <td>{{row.accountName}}</td>
+            <td>{{row.currency}}</td>
+            <td>{{row.accountType}}</td>
+            <td>{{row.valueDate}}</td>
+            <td>{{row.debitAmount}}</td>
+            <td>{{row.creditAmount}}</td>
+            <td>{{row.cardType}}</td>
+        </tr>
+    </table>
+</div>
+-->
